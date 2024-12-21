@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#add-book">Add Book</a></li>
+                <li><a href="#book-list">Book List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Welcome to the Library</h2>
+            <p>Manage your library books efficiently with advanced features!</p>
+        </section>
+
+        <!-- Add Book Section -->
+        <section id="add-book">
+            <h2>Add a New Book</h2>
+            <form id="addBookForm">
+                <label for="bookTitle">Book Title:</label>
+                <input type="text" id="bookTitle" name="bookTitle" required>
+
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" required>
+
+                <label for="year">Publication Year:</label>
+                <input type="number" id="year" name="year" required>
+
+                <button type="submit">Add Book</button>
+            </form>
+        </section>
+
+        <!-- Book List Section -->
+        <section id="book-list">
+            <h2>Book List</h2>
+            <div id="controls">
+                <input type="text" id="searchInput" placeholder="Search by title or author">
+                <select id="filterGenre">
+                    <option value="all">All Genres</option>
+                </select>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Genre</th>
+                        <th>Year</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="bookTableBody">
+                    <!-- Books will be displayed here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Library Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
